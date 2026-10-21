@@ -1,0 +1,53 @@
+{
+  "name": "genpark-personal-agent-posture-ergonomic-spine-cervical-strain-sentinel-skill",
+  "version": "1.0.0",
+  "title": "Posture Ergonomic Cervical Spine Strain Sentinel Skill",
+  "description": "Forward head posture angle telemetry, C1-C7 cervical compressive load modeling, and micro-break ergonomics posture reset coach. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "ergonomics",
+    "text-neck",
+    "cervical-spine",
+    "posture-coach",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "calculate_cervical_spine_load",
+      "description": "Calculate effective head weight on cervical spine as forward neck tilt angle increases from 0 to 60 degrees.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "forward_tilt_angle_degrees": {
+            "type": "number"
+          },
+          "head_weight_lbs": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "forward_tilt_angle_degrees"
+        ]
+      }
+    },
+    {
+      "name": "generate_cervical_micro_reset_routine",
+      "description": "Synthesize a 60-second desk-side chin tuck and thoracic extension routine.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "hours_seated_continuous": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "hours_seated_continuous"
+        ]
+      }
+    }
+  ]
+}
